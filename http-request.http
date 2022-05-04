@@ -1,0 +1,75 @@
+###
+GET http://{{app_url}}/transactions/aggregates
+Content-Type: application/json
+Accept: application/json
+
+{
+"transaction_type": "{{transaction_type-purchase}}",
+"payment_status": "{{payment_status-paid_off}}",
+"qty_type": "{{qty_type-single}}",
+"catalog_ids": [1,2,3,4,5,6],
+"to": "29-9-2019",
+"from": "17-jan-2005"
+
+
+}
+
+###
+GET http://{{app_url}}/transactions
+Content-Type: application/json
+Accept: application/json
+
+{
+"transaction_type": "{{transaction_type-purchase}}",
+"payment_status": "{{payment_status-paid_off}}",
+"qty_type": "{{qty_type-single}}",
+"catalog_ids": [1,1],
+"to": "29-9-2019",
+"from": "17-jan-2005"
+
+
+}
+
+<> 2020-09-10T112054.422.json
+<> 2020-09-10T112041.422.json
+<> 2020-09-10T112000.422.json
+<> 2020-09-10T111937.422.json
+<> 2020-09-10T111932.200.json
+<> 2020-09-10T111902.422.json
+<> 2020-09-10T111842.200.json
+<> 2020-09-10T111744.200.json
+<> 2020-09-10T111736.200.json
+<> 2020-09-10T111723.200.json
+<> 2020-09-10T111656.200.json
+<> 2020-09-10T111638.500.json
+<> 2020-09-10T111602.500.html
+<> 2020-09-10T111535.500.html
+<> 2020-09-10T111457.422.json
+<> 2020-09-10T111449.422.json
+<> 2020-09-10T111430.422.json
+<> 2020-09-10T111407.422.json
+<> 2020-09-10T111309.422.json
+<> 2020-09-10T111258.200.json
+<> 2020-09-10T111249.422.json
+<> 2020-09-10T111118.422.json
+<> 2020-09-10T111049.422.json
+<> 2020-09-10T110851.422.json
+<> 2020-09-10T110757.200.json
+<> 2020-09-10T110717.419.html
+
+###
+POST http://localhost:80/api/item
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="field-name"
+
+field-value
+--WebAppBoundary--
+
+###
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
